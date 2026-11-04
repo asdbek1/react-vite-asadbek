@@ -1,13 +1,18 @@
-import car from './images/images.jpg'
+import Student from './components/Student'
 function App() {
-  return (
-    <div className='card'>
-      <h1 className='title'>Mening ismim Asadbek familyam komiljonov</h1>
-      <p>Yoshim: 14 da</p>
-      <img className='rasm' src={car} alt="Mening rasmim" />
-      <h3>Men haqimda</h3>
-      <p>Men Asadbekman men dasturlashda uqiyman</p>
-    </div>
+  const myCar = {
+    brand:'chevrolet',
+    name:'malibu',
+    color:'black',
+    price:'5000000000000000000000000$',
+    img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr9YMLjcLjAkx1aaLNcVv3TCVpAqO7N_qduZ0UPczX4Q&s=10',
+  };
+  return(
+    <>
+    <Student car={myCar} />
+    </>
   )
 }
-export default App
+
+
+export default App;
