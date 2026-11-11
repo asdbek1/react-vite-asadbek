@@ -1,18 +1,17 @@
-import Student from './components/Student'
+import { useState } from "react";
+
 function App() {
-  const myCar = {
-    brand:'chevrolet',
-    name:'malibu',
-    color:'black',
-    price:'5000000000000000000000000$',
-    img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr9YMLjcLjAkx1aaLNcVv3TCVpAqO7N_qduZ0UPczX4Q&s=10',
-  };
-  return(
+  const [text, setText] = useState(0);
+
+  console.log(text);
+
+  return (
     <>
-    <Student car={myCar} />
+      <div className="card">
+        <h2>{text}</h2>
+        <button className="btn2"  onClick={() => setText(text + 1)}>Click +</button>
+      </div>
     </>
-  )
-}
-
-
+  );
+};
 export default App;
